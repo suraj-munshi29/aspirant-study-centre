@@ -156,17 +156,17 @@ function Index() {
                 { v: "98%", l: "Success Rate", c: "text-secondary" },
                 { v: "200+", l: "Expert Faculty", c: "text-primary" },
               ].map((s, i, arr) => (
-                <>
-                  <div key={s.l} className="flex flex-col items-center flex-1 min-w-[150px]">
+                <Fragment key={s.l}>
+                  <div className="flex flex-col items-center flex-1 min-w-[150px]">
                     <span className={`text-3xl font-bold ${s.c}`}>{s.v}</span>
                     <span className="text-xs font-semibold text-on-surface-variant tracking-wide mt-1">
                       {s.l}
                     </span>
                   </div>
                   {i < arr.length - 1 && (
-                    <div key={`d-${i}`} className="w-px h-12 bg-outline-variant/30 hidden md:block" />
+                    <div className="w-px h-12 bg-outline-variant/30 hidden md:block" />
                   )}
-                </>
+                </Fragment>
               ))}
             </div>
           </div>
