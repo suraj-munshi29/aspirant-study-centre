@@ -252,9 +252,74 @@ function Index() {
           </div>
         </section>
 
+        {/* Lead Faculty Showcase */}
+        <section className="py-16 bg-surface-container-low transition-colors duration-300">
+          <div className="max-w-container-max mx-auto px-gutter">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <span className="text-xs uppercase tracking-widest font-extrabold text-primary px-3 py-1 bg-primary/10 rounded-full inline-block mb-3">
+                Guiding Ambition To Success
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface tracking-tight">
+                Meet Our Lead Faculty
+              </h2>
+              <p className="text-on-surface-variant mt-2 text-sm sm:text-base">
+                Direct mentorship from senior educators with a proven track record of producing top AIR ranks.
+              </p>
+            </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Sir */}
+              <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-lg overflow-hidden flex flex-col sm:flex-row group hover:shadow-2xl hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
+                <div className="sm:w-1/2 bg-gradient-to-b from-primary/10 to-primary/20 flex items-center justify-center min-h-[260px] p-4 relative overflow-hidden">
+                  <img src="/sir.png" alt="Sir - Chief Academic Director" className="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div className="sm:w-1/2 p-6 flex flex-col justify-between">
+                  <div>
+                    <span className="text-xs font-extrabold text-primary bg-primary/10 px-2.5 py-1 rounded-full border border-primary/20">
+                      18+ Yrs Exp
+                    </span>
+                    <h3 className="text-2xl font-bold text-on-surface mt-2">Sir</h3>
+                    <p className="text-sm font-semibold text-primary">Chief Academic Director & GS Lead</p>
+                    <p className="text-xs text-on-surface-variant mt-3 leading-relaxed">
+                      Leading General Studies strategy, Indian Polity, and mentorship programs for aspirants across India.
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-outline-variant/20">
+                    <Link to="/faculty" className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                      View Profile & Strategy <Icon name="arrow_forward" className="text-xs" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
 
-        <section className="py-16 bg-surface-container-low border-y border-outline-variant/30 overflow-hidden relative transition-colors duration-300">
+              {/* Mam */}
+              <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-lg overflow-hidden flex flex-col sm:flex-row group hover:shadow-2xl hover:border-secondary/40 hover:-translate-y-1 transition-all duration-300">
+                <div className="sm:w-1/2 bg-gradient-to-b from-secondary/10 to-secondary/20 flex items-center justify-center min-h-[260px] p-4 relative overflow-hidden">
+                  <img src="/mam.png" alt="Mam - Director of Academics" className="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div className="sm:w-1/2 p-6 flex flex-col justify-between">
+                  <div>
+                    <span className="text-xs font-extrabold text-secondary bg-secondary/10 px-2.5 py-1 rounded-full border border-secondary/20">
+                      15+ Yrs Exp
+                    </span>
+                    <h3 className="text-2xl font-bold text-on-surface mt-2">Mam</h3>
+                    <p className="text-sm font-semibold text-secondary">Director of Academics & Aptitude Lead</p>
+                    <p className="text-xs text-on-surface-variant mt-3 leading-relaxed">
+                      Specializing in Quant Aptitude speed techniques, Logical Reasoning, and overall academic excellence.
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-outline-variant/20">
+                    <Link to="/faculty" className="text-xs font-bold text-secondary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                      View Profile & Strategy <Icon name="arrow_forward" className="text-xs" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-primary overflow-hidden relative transition-colors duration-300">
           <div className="max-w-container-max mx-auto px-gutter relative z-10 text-center">
             <span className="text-xs uppercase tracking-widest font-extrabold text-primary px-3 py-1 bg-primary/10 rounded-full inline-block mb-3">
               Proven Track Record

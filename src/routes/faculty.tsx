@@ -107,8 +107,14 @@ function FacultyPage() {
             <span className="text-xs uppercase tracking-widest font-extrabold text-primary px-3 py-1 bg-primary/10 rounded-full inline-block mb-4">
               World-Class Mentorship
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-              Meet Our <span className="text-primary italic">Senior Leadership & Mentors</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight">
+              Meet Our{" "}
+              <span className="relative inline-block mt-2 sm:mt-0">
+                <span className="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent italic animate-text-shimmer animate-glow-pulse inline-block pr-1">
+                  Senior Leadership & Mentors
+                </span>
+                <span className="absolute -bottom-2 left-0 w-full h-[3px] bg-gradient-to-r from-primary via-secondary to-tertiary rounded-full animate-pulse opacity-80" />
+              </span>
             </h1>
           </div>
         </section>
