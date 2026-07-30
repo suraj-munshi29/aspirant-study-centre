@@ -5,9 +5,9 @@ import { SiteFooter } from "../components/SiteFooter";
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Courses | Aspirant Study Center — SSC, Banking, Railways & State PSC" },
+      { title: "Courses | Aspirant Study Centre — SSC, Banking, Railways & State PSC" },
       { name: "description", content: "Explore specialized Government Exam coaching programs for SSC CGL/CHSL, IBPS/SBI Banking, Railways, State PSC, and Defence exams." },
-      { property: "og:title", content: "Government Exam Courses | Aspirant Study Center" },
+      { property: "og:title", content: "Government Exam Courses | Aspirant Study Centre" },
       { property: "og:description", content: "SSC, Banking, Railways & State PSC coaching programs tailored for selection success." },
       { property: "og:type", content: "website" },
     ],

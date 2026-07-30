@@ -18,8 +18,8 @@ const TOPPERS = [
 ];
 
 const TESTIMONIALS = [
-  { quote: "The GS strategy sessions and current affairs modules at Aspirant Study Center turned my exam preparation around. The faculty's insights on answer writing were invaluable.", name: "Karan Mehta", role: "State Administrative Officer, Batch '23", dot: "bg-primary/20" },
-  { quote: "Cracking SSC CGL in my very first attempt was possible only because of the speed techniques and daily mock test series at Aspirant Study Center.", name: "Priya Sharma", role: "Excise Inspector (SSC CGL)", dot: "bg-secondary/20" },
+  { quote: "The GS strategy sessions and current affairs modules at Aspirant Study Centre turned my exam preparation around. The faculty's insights on answer writing were invaluable.", name: "Karan Mehta", role: "State Administrative Officer, Batch '23", dot: "bg-primary/20" },
+  { quote: "Cracking SSC CGL in my very first attempt was possible only because of the speed techniques and daily mock test series at Aspirant Study Centre.", name: "Priya Sharma", role: "Excise Inspector (SSC CGL)", dot: "bg-secondary/20" },
   { quote: "The Quantitative Aptitude and Reasoning faculty helped me clear SBI PO with ease. The study material is precise, comprehensive, and exam-focused.", name: "Arjun Rawat", role: "SBI PO Officer", dot: "bg-tertiary/20" },
 ];
 
@@ -158,7 +158,7 @@ function Index() {
           <div className="max-w-container-max mx-auto px-gutter">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface tracking-tight">The Aspirant Advantage</h2>
-              <p className="text-on-surface-variant mt-2">Why thousands of government service aspirants trust Aspirant Study Center for SSC, Banking & State PSC exams.</p>
+              <p className="text-on-surface-variant mt-2">Why thousands of government service aspirants trust Aspirant Study Centre for SSC, Banking & State PSC exams.</p>
             </div>
 
             {/* Bento Grid */}

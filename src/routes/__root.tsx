@@ -77,9 +77,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Aspirant Study Center | Government Exam Preparation (SSC, Banking, Railways, State PSC)" },
-      { name: "description", content: "Specialized coaching for SSC, Banking, Railways, State PSC, and Defence exams with India's top educators. Turn ambition into government service achievement at Aspirant Study Center." },
-      { property: "og:title", content: "Aspirant Study Center | Government Exam Preparation" },
+      { title: "Aspirant Study Centre | Government Exam Preparation (SSC, Banking, Railways, State PSC)" },
+      { name: "description", content: "Specialized coaching for SSC, Banking, Railways, State PSC, and Defence exams with India's top educators. Turn ambition into government service achievement at Aspirant Study Centre." },
+      { property: "og:title", content: "Aspirant Study Centre | Government Exam Preparation" },
       { property: "og:description", content: "Specialized SSC, Banking, Railways, and State PSC coaching with India's top experts." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

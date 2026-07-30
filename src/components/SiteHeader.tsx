@@ -6,8 +6,8 @@ const LOGO = "/logo.png";
 
 const NAV = [
   { label: "Home", to: "/" as const },
-  { label: "Courses", to: "/courses" as const },
   { label: "About", to: "/about" as const },
+  { label: "Courses", to: "/courses" as const },
   { label: "Faculty", to: "/faculty" as const },
   { label: "Contact", to: "/contact" as const },
 ];
@@ -20,10 +20,10 @@ export function SiteHeader() {
       <nav className="flex items-center justify-between h-20 px-gutter max-w-container-max mx-auto">
         <Link to="/" className="flex min-w-0 items-center gap-3 group">
           <div className="w-10 h-10 rounded-xl bg-surface-container-lowest p-1 shadow-sm border border-outline-variant/30 group-hover:scale-105 transition-transform shrink-0 flex items-center justify-center overflow-hidden">
-            <img alt="Aspirant Study Center Logo" className="w-full h-full object-contain" src={LOGO} />
+            <img alt="Aspirant Study Centre Logo" className="w-full h-full object-contain" src={LOGO} />
           </div>
           <span className="truncate text-lg sm:text-xl md:text-2xl font-extrabold text-primary tracking-tight group-hover:text-primary/90 transition-colors">
-            Aspirant Study Center
+            Aspirant Study Centre
           </span>
         </Link>
 

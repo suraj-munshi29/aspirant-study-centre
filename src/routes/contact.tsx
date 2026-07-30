@@ -6,9 +6,9 @@ import { SiteFooter } from "../components/SiteFooter";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact | Aspirant Study Center — Government Exam Admissions" },
-      { name: "description", content: "Get in touch with Aspirant Study Center. Inquire about SSC, Banking, Railways, State PSC & Defence exam coaching, or visit our campus." },
-      { property: "og:title", content: "Contact | Aspirant Study Center" },
+      { title: "Contact | Aspirant Study Centre — Government Exam Admissions" },
+      { name: "description", content: "Get in touch with Aspirant Study Centre. Inquire about SSC, Banking, Railways, State PSC & Defence exam coaching, or visit our campus." },
+      { property: "og:title", content: "Contact | Aspirant Study Centre" },
       { property: "og:description", content: "Reach our government exam admission counselors and faculty." },
       { property: "og:type", content: "website" },
     ],
@@ -44,7 +44,7 @@ function ContactPage() {
               {[
                 { icon: "location_on", title: "Visit Us", desc: "402, Aspirant Plaza, Education Valley, Kota, Rajasthan" },
                 { icon: "call", title: "Call Us", desc: "+91 800-ASP-EDU (Mon-Sat, 9am-8pm)" },
-                { icon: "mail", title: "Email", desc: "admissions@aspirantstudycenter.edu" },
+                { icon: "mail", title: "Email", desc: "admissions@aspirantstudycentre.edu" },
                 { icon: "schedule", title: "Office Hours", desc: "Monday – Saturday, 9:00 AM – 8:00 PM" },
               ].map((c) => (
                 <div key={c.title} className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-sm flex gap-4">

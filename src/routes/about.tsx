@@ -5,9 +5,9 @@ import { SiteFooter } from "../components/SiteFooter";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About | Aspirant Study Center — 15 Years of Government Exam Excellence" },
-      { name: "description", content: "Learn about Aspirant Study Center — our mission, values, and 15-year legacy of guiding civil service and government job aspirants to top ranks." },
-      { property: "og:title", content: "About | Aspirant Study Center" },
+      { title: "About | Aspirant Study Centre — 15 Years of Government Exam Excellence" },
+      { name: "description", content: "Learn about Aspirant Study Centre — our mission, values, and 15-year legacy of guiding civil service and government job aspirants to top ranks." },
+      { property: "og:title", content: "About | Aspirant Study Centre" },
       { property: "og:description", content: "Our mission, values, and 15-year legacy of shaping government officers." },
       { property: "og:type", content: "website" },
     ],
@@ -25,13 +25,6 @@ const VALUES = [
   { icon: "handshake", title: "Our Values", desc: "Consistency, analytical rigor, and dedicated mentorship guide every classroom session, test evaluation, and study module." },
 ];
 
-const TIMELINE = [
-  { year: "2009", title: "Founded in Kota", desc: "Started with a vision to make top-tier government exam coaching accessible to every passionate aspirant." },
-  { year: "2014", title: "Top 50 Ranks in Competitive Exams", desc: "Our students achieved top ranks in State PSC & SSC CGL, putting Aspirant Study Center on the national map." },
-  { year: "2019", title: "50,000+ Selections", desc: "Expanded across Banking, SSC, Railways, and State PSC wings with specialized test evaluation labs." },
-  { year: "2024", title: "15 Years of Trust", desc: "9 centers, 200+ ex-officers & subject experts, and a 98% qualification rate across major competitive exams." },
-];
-
 function AboutPage() {
   return (
     <div className="bg-surface text-on-surface min-h-screen flex flex-col">
@@ -44,21 +37,21 @@ function AboutPage() {
                 Shaping India's <span className="text-primary italic">Future Public Servants</span> Since 2009
               </h1>
               <p className="mt-4 text-base sm:text-lg text-on-surface-variant">
-                Aspirant Study Center is more than a coaching institute — it's a dedicated launchpad for civil servants, bank officers, and public administrators across India.
+                Aspirant Study Centre is more than a coaching institute — it's a dedicated launchpad for civil servants, bank officers, and public administrators across India.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { v: "15+", l: "Years of Trust" },
-                { v: "50k+", l: "Selected Candidates" },
-                { v: "98%", l: "Qualification Rate" },
-                { v: "9", l: "Dedicated Centers" },
-              ].map((s) => (
-                <div key={s.l} className="bg-surface-container-lowest rounded-xl p-6 text-center shadow-sm border border-outline-variant/30">
-                  <div className="text-2xl sm:text-3xl font-bold text-primary">{s.v}</div>
-                  <div className="text-xs font-semibold text-on-surface-variant tracking-wide mt-1">{s.l}</div>
-                </div>
-              ))}
+            <div className="flex items-center justify-center p-4 relative group">
+              {/* Outer glowing aura */}
+              <div className="absolute -inset-8 bg-gradient-to-tr from-primary/30 via-secondary/25 to-primary/40 rounded-full blur-3xl animate-pulse group-hover:scale-110 group-hover:from-primary/40 group-hover:to-secondary/40 transition-all duration-700 opacity-90" />
+
+              {/* Card container with outer glow shadow */}
+              <div className="relative bg-surface-container-lowest/80 glass-card p-6 sm:p-10 rounded-3xl border border-primary/30 shadow-[0_0_50px_rgba(2,132,199,0.3)] dark:shadow-[0_0_60px_rgba(56,189,248,0.25)] hover:shadow-[0_0_80px_rgba(2,132,199,0.5)] dark:hover:shadow-[0_0_90px_rgba(56,189,248,0.45)] hover:scale-105 transition-all duration-500 flex items-center justify-center">
+                <img
+                  src="/logo.png"
+                  alt="Aspirant Study Centre Logo"
+                  className="max-h-64 sm:max-h-72 w-auto object-contain drop-shadow-[0_0_20px_rgba(2,132,199,0.4)] dark:drop-shadow-[0_0_25px_rgba(56,189,248,0.5)]"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -74,21 +67,6 @@ function AboutPage() {
                 <p className="mt-2 text-on-surface-variant text-sm">{v.desc}</p>
               </div>
             ))}
-          </div>
-        </section>
-
-        <section className="py-16">
-          <div className="max-w-container-max mx-auto px-gutter">
-            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">Our Journey</h2>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {TIMELINE.map((t) => (
-                <div key={t.year} className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-sm">
-                  <div className="text-primary font-bold text-2xl">{t.year}</div>
-                  <h4 className="mt-2 font-semibold">{t.title}</h4>
-                  <p className="mt-1 text-sm text-on-surface-variant">{t.desc}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 

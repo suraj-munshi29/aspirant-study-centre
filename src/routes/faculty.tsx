@@ -5,9 +5,9 @@ import { SiteFooter } from "../components/SiteFooter";
 export const Route = createFileRoute("/faculty")({
   head: () => ({
     meta: [
-      { title: "Faculty | Aspirant Study Center — Senior Mentors & Directors" },
+      { title: "Faculty | Aspirant Study Centre — Senior Mentors & Directors" },
       { name: "description", content: "Meet our senior leadership and expert faculty guiding aspirants to top ranks in SSC, Banking, Railways, and State PSCs." },
-      { property: "og:title", content: "Faculty | Aspirant Study Center" },
+      { property: "og:title", content: "Faculty | Aspirant Study Centre" },
       { property: "og:description", content: "Meet the mentors behind our top government selection ranks." },
       { property: "og:type", content: "website" },
     ],
@@ -127,7 +127,7 @@ function FacultyPage() {
                 Chief Academic Leadership
               </h2>
               <p className="text-on-surface-variant mt-2 text-sm sm:text-base">
-                Direct mentorship from the founders and academic heads behind Aspirant Study Center.
+                Direct mentorship from the founders and academic heads behind Aspirant Study Centre.
               </p>
             </div>
 

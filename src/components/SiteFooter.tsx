@@ -13,7 +13,7 @@ export function SiteFooter() {
             <div className="w-9 h-9 rounded-xl bg-surface-container-lowest p-1 shadow-sm border border-outline-variant/30 shrink-0 flex items-center justify-center overflow-hidden">
               <img alt="Logo" className="w-full h-full object-contain" src={LOGO} />
             </div>
-            <span className="text-lg font-extrabold text-primary tracking-tight">Aspirant Study Center</span>
+            <span className="text-lg font-extrabold text-primary tracking-tight">Aspirant Study Centre</span>
           </div>
           <p className="text-on-surface-variant text-sm mt-sm">
             Pioneering excellence in competitive education for over 15 years. Nurturing minds, building futures.
@@ -41,7 +41,7 @@ export function SiteFooter() {
           <ul className="flex flex-col gap-sm text-sm text-on-surface-variant">
             <li className="flex items-center gap-sm"><Icon name="location_on" style={{ fontSize: 18 }} /> 402, Aspirant Plaza, Kota</li>
             <li className="flex items-center gap-sm"><Icon name="call" style={{ fontSize: 18 }} /> +91 800-ASP-EDU</li>
-            <li className="flex items-center gap-sm break-all"><Icon name="mail" style={{ fontSize: 18 }} /> admissions@aspirantstudycenter.edu</li>
+            <li className="flex items-center gap-sm break-all"><Icon name="mail" style={{ fontSize: 18 }} /> admissions@aspirantstudycentre.edu</li>
           </ul>
         </div>
         <div className="flex flex-col gap-4">
@@ -54,7 +54,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="max-w-container-max mx-auto px-gutter mt-16 pt-6 border-t border-outline-variant/30 text-center">
-        <p className="text-on-surface-variant text-sm">© 2024 Aspirant Study Center. Elevate Your Potential.</p>
+        <p className="text-on-surface-variant text-sm">© 2024 Aspirant Study Centre. Elevate Your Potential.</p>
       </div>
     </footer>
   );
