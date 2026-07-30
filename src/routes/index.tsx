@@ -2,6 +2,7 @@ import { Fragment, useState, useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
+import { AiLoader } from "../components/ui/ai-loader";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -100,6 +101,19 @@ function NumberScramble({ target = 12, suffix = "+", duration = 1600, intervalSp
 }
 
 function Index() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <AiLoader size={200} text="AAC" />;
+  }
+
   return (
     <div className="bg-surface text-on-surface">
       <SiteHeader />
