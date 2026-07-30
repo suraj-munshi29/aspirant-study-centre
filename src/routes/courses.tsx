@@ -5,10 +5,10 @@ import { SiteFooter } from "../components/SiteFooter";
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Courses | Aspirant Study Center — JEE, NEET & Foundation" },
-      { name: "description", content: "Explore JEE, NEET, and Foundation coaching programs at Aspirant Study Center — designed by top faculty for aspirants who aim high." },
-      { property: "og:title", content: "Courses | Aspirant Study Center" },
-      { property: "og:description", content: "JEE, NEET, and Foundation coaching programs for every aspirant." },
+      { title: "Courses | Aspirant Study Center — UPSC, SSC, Banking & Railways" },
+      { name: "description", content: "Explore specialized Government Exam coaching programs for UPSC, SSC CGL/CHSL, IBPS/SBI Banking, Railways, State PSC, and Defence exams." },
+      { property: "og:title", content: "Government Exam Courses | Aspirant Study Center" },
+      { property: "og:description", content: "UPSC, SSC, Banking, Railways & State PSC coaching programs tailored for selection success." },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -16,12 +16,12 @@ export const Route = createFileRoute("/courses")({
 });
 
 const COURSES = [
-  { icon: "engineering", title: "JEE (Main + Advanced)", tag: "2-Year Program", desc: "Comprehensive prep for IIT/NIT aspirants with weekly tests, DPP, and mentor mapping.", features: ["6 mock tests/month", "Live doubt cells", "IITian mentors"], color: "bg-primary/10 text-primary" },
-  { icon: "vaccines", title: "NEET UG", tag: "2-Year Program", desc: "Structured Biology, Physics, and Chemistry roadmap aligned with the latest NTA pattern.", features: ["NCERT deep-dive", "Weekly NEET-pattern tests", "AIIMS alumni mentors"], color: "bg-secondary/10 text-secondary" },
-  { icon: "school", title: "Foundation (Class 8-10)", tag: "Early Advantage", desc: "Builds strong conceptual roots in Science and Math for future JEE/NEET aspirants.", features: ["Olympiad prep", "NTSE guidance", "Small batches"], color: "bg-tertiary-container/50 text-tertiary" },
-  { icon: "rocket_launch", title: "Crash Course", tag: "3-Month Sprint", desc: "Fast-track revision and test practice for repeaters and last-mile aspirants.", features: ["30+ mock tests", "Formula sheets", "1:1 doubt slots"], color: "bg-primary/10 text-primary" },
-  { icon: "psychology", title: "Dropper Batch", tag: "1-Year Program", desc: "Full-time immersive program for JEE/NEET droppers with personalized study plans.", features: ["Daily targets", "Weekly parent reviews", "Peer study groups"], color: "bg-secondary/10 text-secondary" },
-  { icon: "workspace_premium", title: "Scholarship Program", tag: "Merit Based", desc: "Up to 100% scholarships for top scorers of our national-level entrance test.", features: ["Nation-wide test", "Merit + means aid", "Fast-track admission"], color: "bg-tertiary-container/50 text-tertiary" },
+  { icon: "gavel", title: "UPSC Civil Services (IAS/IPS)", tag: "1 & 2-Year Foundation", desc: "Comprehensive GS Prelims + Mains syllabus coverage, CSAT, optional guidance, and rigorous answer-writing modules.", features: ["Daily Mains Answer Evaluation", "Monthly Current Affairs Mag", "Ex-IAS Mentorship"], color: "bg-primary/10 text-primary" },
+  { icon: "account_balance", title: "SSC CGL / CHSL", tag: "Target Batch", desc: "Complete Tier-1 & Tier-2 prep focusing on high-speed Quantitative tricks, Reasoning, English, and General Awareness.", features: ["50+ Full-Length Mock Tests", "Speed Maths Workshops", "Previous 10-Year Pyq Analysis"], color: "bg-secondary/10 text-secondary" },
+  { icon: "payments", title: "Banking (IBPS / SBI PO & Clerk)", tag: "Speed & Accuracy", desc: "Intensive training for SBI PO, IBPS PO/Clerk, RRB, and LIC exams with daily sectional speed tests.", features: ["Sectional Speed Drills", "Banking Awareness & Economy", "Interview Guidance Panel"], color: "bg-tertiary-container/50 text-tertiary" },
+  { icon: "train", title: "Railways (RRB NTPC & Group D)", tag: "Comprehensive", desc: "Targeted coverage of General Science, General Intelligence, Arithmetic, and Railway specific GK.", features: ["Science Numerical Mastery", "CBT-1 & CBT-2 Test Series", "Bilingual Study Material"], color: "bg-primary/10 text-primary" },
+  { icon: "domain", title: "State PSC (State Civil Services)", tag: "State Focused", desc: "Dedicated preparation for State Public Service Commissions including State History, Geography, and State GK.", features: ["State-Specific GS Modules", "Regional Language Papers", "Mains Answer Writing"], color: "bg-secondary/10 text-secondary" },
+  { icon: "shield", title: "Defence (NDA / CDS / AFCAT)", tag: "Armed Forces", desc: "Rigorous preparation for NDA, CDS, and AFCAT written examinations alongside SSB interview orientation.", features: ["SSB Physical & Psych Prep", "Mathematics & GAT Modules", "Mock Interviews"], color: "bg-tertiary-container/50 text-tertiary" },
 ];
 
 function Icon({ name, className = "" }: { name: string; className?: string }) {
@@ -33,37 +33,37 @@ function CoursesPage() {
     <div className="bg-surface text-on-surface min-h-screen flex flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <section className="hero-gradient py-section-gap">
+        <section className="hero-gradient py-16">
           <div className="max-w-container-max mx-auto px-gutter text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-              Programs Built for <span className="text-primary italic">Toppers</span>
+              Programs Built for <span className="text-primary italic">Future Officers</span>
             </h1>
-            <p className="mt-md text-base sm:text-lg text-on-surface-variant max-w-2xl mx-auto">
-              Pick the course that matches your goal. Every program is backed by expert faculty, structured content, and rigorous testing.
+            <p className="mt-4 text-base sm:text-lg text-on-surface-variant max-w-2xl mx-auto">
+              Pick the target exam program that matches your career aspiration. Every course is crafted by top ex-officers, subject experts, and research analysts.
             </p>
           </div>
         </section>
 
-        <section className="py-section-gap">
-          <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-lg">
+        <section className="py-16">
+          <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {COURSES.map((c) => (
-              <article key={c.title} className="p-lg bg-white rounded-xl shadow-sm border border-outline-variant/30 flex flex-col gap-md hover:shadow-lg transition-all">
+              <article key={c.title} className="p-6 bg-white rounded-xl shadow-sm border border-outline-variant/30 flex flex-col gap-4 hover:shadow-lg transition-all">
                 <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${c.color}`}>
                   <Icon name={c.icon} />
                 </div>
                 <div>
                   <span className="text-xs font-semibold tracking-widest text-on-surface-variant">{c.tag.toUpperCase()}</span>
-                  <h3 className="text-xl font-bold mt-xs">{c.title}</h3>
+                  <h3 className="text-xl font-bold mt-1">{c.title}</h3>
                 </div>
                 <p className="text-on-surface-variant text-sm">{c.desc}</p>
-                <ul className="flex flex-col gap-xs mt-auto">
+                <ul className="flex flex-col gap-2 mt-auto pt-2">
                   {c.features.map((f) => (
-                    <li key={f} className="flex items-center gap-sm text-sm">
-                      <Icon name="check_circle" className="text-secondary" /> {f}
+                    <li key={f} className="flex items-center gap-2 text-sm">
+                      <Icon name="check_circle" className="text-secondary text-base shrink-0" /> <span>{f}</span>
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact" className="mt-md bg-primary text-on-primary text-center px-lg py-sm rounded-lg text-sm font-semibold hover:shadow-md transition-all">
+                <Link to="/contact" className="mt-4 bg-primary text-on-primary text-center px-6 py-2.5 rounded-lg text-sm font-semibold hover:shadow-md transition-all">
                   Enquire Now
                 </Link>
               </article>
