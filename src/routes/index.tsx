@@ -260,7 +260,10 @@ function Index() {
                 Guiding Ambition To Success
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface tracking-tight">
-                Meet Our Lead Faculty
+                Meet Our{" "}
+                <span className="bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent italic animate-text-shimmer animate-glow-pulse inline-block">
+                  Lead Faculty & Mentors
+                </span>
               </h2>
               <p className="text-on-surface-variant mt-2 text-sm sm:text-base">
                 Direct mentorship from senior educators with a proven track record of producing top AIR ranks.
