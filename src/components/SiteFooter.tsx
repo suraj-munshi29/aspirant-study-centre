@@ -42,16 +42,16 @@ export function SiteFooter() {
             <li className="flex items-center gap-sm break-all"><Icon name="mail" style={{ fontSize: 18 }} /> admissions@aspirantstudycenter.edu</li>
           </ul>
         </div>
-        <div className="flex flex-col gap-md">
+        <div className="flex flex-col gap-4">
           <h4 className="font-bold text-primary">Newsletter</h4>
-          <p className="text-xs text-on-surface-variant">Get tips on JEE/NEET prep directly in your inbox.</p>
-          <div className="flex gap-0 rounded-lg overflow-hidden border border-outline-variant mt-sm">
-            <input className="bg-white border-none text-sm w-full focus:ring-0 px-md min-w-0" placeholder="Your Email" type="email" />
-            <button className="bg-primary text-on-primary px-md shrink-0"><Icon name="send" /></button>
+          <p className="text-xs text-on-surface-variant">Get current affairs updates & exam strategy directly in your inbox.</p>
+          <div className="flex gap-0 rounded-lg overflow-hidden border border-outline-variant mt-2">
+            <input className="bg-white border-none text-sm w-full focus:ring-0 px-4 min-w-0" placeholder="Your Email" type="email" />
+            <button className="bg-primary text-on-primary px-4 shrink-0"><Icon name="send" /></button>
           </div>
         </div>
       </div>
-      <div className="max-w-container-max mx-auto px-gutter mt-section-gap pt-lg border-t border-outline-variant/30 text-center">
+      <div className="max-w-container-max mx-auto px-gutter mt-16 pt-6 border-t border-outline-variant/30 text-center">
         <p className="text-on-surface-variant text-sm">© 2024 Aspirant Study Center. Elevate Your Potential.</p>
       </div>
     </footer>
