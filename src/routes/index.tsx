@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { AiLoader } from "../components/ui/ai-loader";
+import { TextRoll } from "../components/ui/text-roll";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -157,7 +158,9 @@ function Index() {
         <section className="py-16 bg-surface-container-low transition-colors duration-300">
           <div className="max-w-container-max mx-auto px-gutter">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface tracking-tight">The Aspirant Advantage</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface tracking-tight">
+                <TextRoll className="inline-block text-on-surface">The Aspirant Advantage</TextRoll>
+              </h2>
               <p className="text-on-surface-variant mt-2">Why thousands of government service aspirants trust Aspirant Study Centre for SSC, Banking & State PSC exams.</p>
             </div>
 
