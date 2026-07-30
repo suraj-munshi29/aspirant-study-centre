@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ThemeToggle } from "./ThemeToggle";
 
-const LOGO = "https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg";
+const LOGO = "/logo.png";
 
 const NAV = [
   { label: "Home", to: "/" as const },
@@ -18,9 +18,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-colors duration-300">
       <nav className="flex items-center justify-between h-20 px-gutter max-w-container-max mx-auto">
-        <Link to="/" className="flex min-w-0 items-center gap-sm">
-          <img alt="Aspirant Study Center Logo" className="h-10 w-10 shrink-0 object-contain" src={LOGO} />
-          <span className="truncate text-lg sm:text-2xl font-bold text-primary tracking-tight">
+        <Link to="/" className="flex min-w-0 items-center gap-3 group">
+          <div className="w-10 h-10 rounded-xl bg-surface-container-lowest p-1 shadow-sm border border-outline-variant/30 group-hover:scale-105 transition-transform shrink-0 flex items-center justify-center overflow-hidden">
+            <img alt="Aspirant Study Center Logo" className="w-full h-full object-contain" src={LOGO} />
+          </div>
+          <span className="truncate text-lg sm:text-xl md:text-2xl font-extrabold text-primary tracking-tight group-hover:text-primary/90 transition-colors">
             Aspirant Study Center
           </span>
         </Link>

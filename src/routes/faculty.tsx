@@ -110,9 +110,6 @@ function FacultyPage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
               Meet Our <span className="text-primary italic">Senior Leadership & Mentors</span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-              Guided by veteran educators and academic directors with decades of combined experience in shaping top government examination selections across India.
-            </p>
           </div>
         </section>
 
@@ -187,76 +184,7 @@ function FacultyPage() {
           </div>
         </section>
 
-        {/* Academic Departments Overview */}
-        <section className="py-16 bg-surface">
-          <div className="max-w-container-max mx-auto px-gutter">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <h2 className="text-2xl sm:text-3xl font-bold text-on-surface tracking-tight">
-                Specialized Academic Wings
-              </h2>
-              <p className="text-on-surface-variant mt-2 text-sm sm:text-base">
-                Powered by a dedicated team of over 200+ subject experts, analysts, and test evaluators across departments.
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {DEPARTMENT_WINGS.map((w) => (
-                <div
-                  key={w.title}
-                  className="p-6 bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between hover:shadow-lg hover:border-primary/30 transition-all duration-300 group"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className={`w-12 h-12 rounded-xl ${w.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon name={w.icon} className="text-2xl" />
-                      </div>
-                      <span className="text-xs font-extrabold text-on-surface-variant bg-surface-container px-3 py-1 rounded-full border border-outline-variant/20">
-                        {w.mentorsCount}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-on-surface mb-2">{w.title}</h3>
-                    <p className="text-sm text-on-surface-variant leading-relaxed">{w.desc}</p>
-                  </div>
-                  <div className="mt-6 pt-4 border-t border-outline-variant/20 flex items-center text-xs font-semibold text-primary group-hover:translate-x-1 transition-transform duration-300">
-                    <span>Comprehensive Exam Prep</span>
-                    <Icon name="chevron_right" className="ml-1 text-sm" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="max-w-container-max mx-auto px-gutter mb-16">
-          <div className="bg-surface-container-highest rounded-2xl p-8 md:p-16 text-center relative overflow-hidden border border-outline-variant/30">
-            <div className="relative z-10 flex flex-col items-center gap-3">
-              <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-2">
-                <Icon name="groups" className="text-3xl" />
-              </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-primary tracking-tight">
-                Want 1-on-1 Guidance From Senior Faculty?
-              </h2>
-              <p className="mt-2 text-on-surface-variant max-w-xl text-sm sm:text-base">
-                Book a personalized counseling and strategy session with our senior mentors to plan your government exam preparation roadmap.
-              </p>
-              <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/contact"
-                  className="bg-primary text-on-primary px-8 py-3.5 rounded-xl font-bold shadow-lg hover:shadow-primary/30 hover:scale-105 active:scale-95 transition-all"
-                >
-                  Book Counseling Session
-                </Link>
-                <Link
-                  to="/courses"
-                  className="bg-surface-container-lowest text-primary border border-primary px-8 py-3.5 rounded-xl font-bold hover:bg-primary/10 transition-all"
-                >
-                  Explore Courses
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <SiteFooter />

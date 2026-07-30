@@ -1,4 +1,4 @@
-const LOGO = "https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg";
+const LOGO = "/logo.png";
 
 function Icon({ name, style }: { name: string; style?: React.CSSProperties }) {
   return <span className="material-symbols-outlined" style={style}>{name}</span>;
@@ -9,9 +9,11 @@ export function SiteFooter() {
     <footer className="bg-surface-container-highest w-full pt-section-gap pb-lg">
       <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-lg">
         <div className="flex flex-col gap-md">
-          <div className="flex items-center gap-sm">
-            <img alt="Logo" className="h-8 w-8 object-contain" src={LOGO} />
-            <span className="text-lg font-bold text-primary">Aspirant Study Center</span>
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-surface-container-lowest p-1 shadow-sm border border-outline-variant/30 shrink-0 flex items-center justify-center overflow-hidden">
+              <img alt="Logo" className="w-full h-full object-contain" src={LOGO} />
+            </div>
+            <span className="text-lg font-extrabold text-primary tracking-tight">Aspirant Study Center</span>
           </div>
           <p className="text-on-surface-variant text-sm mt-sm">
             Pioneering excellence in competitive education for over 15 years. Nurturing minds, building futures.

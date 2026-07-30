@@ -19,7 +19,7 @@ const TOPPERS = [
 const TESTIMONIALS = [
   { quote: "The GS strategy sessions and current affairs modules at Aspirant Study Center turned my exam preparation around. The faculty's insights on answer writing were invaluable.", name: "Karan Mehta", role: "State Administrative Officer, Batch '23", dot: "bg-primary/20" },
   { quote: "Cracking SSC CGL in my very first attempt was possible only because of the speed techniques and daily mock test series at Aspirant Study Center.", name: "Priya Sharma", role: "Excise Inspector (SSC CGL)", dot: "bg-secondary/20" },
-  { quote: "The Quantitative Aptitude and Reasoning faculty helped me clear SBI PO with ease. The study material is precise, comprehensive, and exam-focused.", name: "Arjun Rawat", role: "SBI PO Officer", dot: "bg-tertiary-fixed/60" },
+  { quote: "The Quantitative Aptitude and Reasoning faculty helped me clear SBI PO with ease. The study material is precise, comprehensive, and exam-focused.", name: "Arjun Rawat", role: "SBI PO Officer", dot: "bg-tertiary/20" },
 ];
 
 function Icon({ name, className = "", style }: { name: string; className?: string; style?: React.CSSProperties }) {
@@ -252,84 +252,22 @@ function Index() {
           </div>
         </section>
 
-        {/* Lead Faculty Showcase */}
-        <section className="py-16 bg-surface-container-low transition-colors duration-300">
-          <div className="max-w-container-max mx-auto px-gutter">
-            <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-xs uppercase tracking-widest font-extrabold text-primary px-3 py-1 bg-primary/10 rounded-full inline-block mb-3">
-                Guiding Ambition To Success
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface tracking-tight">
-                Meet Our Lead Faculty
-              </h2>
-              <p className="text-on-surface-variant mt-2 text-sm sm:text-base">
-                Direct mentorship from senior educators with a proven track record of producing top AIR ranks.
-              </p>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Sir */}
-              <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-lg overflow-hidden flex flex-col sm:flex-row group hover:shadow-2xl hover:border-primary/40 hover:-translate-y-1 transition-all duration-300">
-                <div className="sm:w-1/2 bg-gradient-to-b from-primary/10 to-primary/20 flex items-center justify-center min-h-[260px] p-4 relative overflow-hidden">
-                  <img src="/sir.png" alt="Sir - Chief Academic Director" className="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-300" />
-                </div>
-                <div className="sm:w-1/2 p-6 flex flex-col justify-between">
-                  <div>
-                    <span className="text-xs font-extrabold text-primary bg-primary/10 px-2.5 py-1 rounded-full border border-primary/20">
-                      18+ Yrs Exp
-                    </span>
-                    <h3 className="text-2xl font-bold text-on-surface mt-2">Sir</h3>
-                    <p className="text-sm font-semibold text-primary">Chief Academic Director & GS Lead</p>
-                    <p className="text-xs text-on-surface-variant mt-3 leading-relaxed">
-                      Leading General Studies strategy, Indian Polity, and mentorship programs for aspirants across India.
-                    </p>
-                  </div>
-                  <div className="mt-4 pt-3 border-t border-outline-variant/20">
-                    <Link to="/faculty" className="text-xs font-bold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                      View Profile & Strategy <Icon name="arrow_forward" className="text-xs" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
 
-              {/* Mam */}
-              <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant/30 shadow-lg overflow-hidden flex flex-col sm:flex-row group hover:shadow-2xl hover:border-secondary/40 hover:-translate-y-1 transition-all duration-300">
-                <div className="sm:w-1/2 bg-gradient-to-b from-secondary/10 to-secondary/20 flex items-center justify-center min-h-[260px] p-4 relative overflow-hidden">
-                  <img src="/mam.png" alt="Mam - Director of Academics" className="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-300" />
-                </div>
-                <div className="sm:w-1/2 p-6 flex flex-col justify-between">
-                  <div>
-                    <span className="text-xs font-extrabold text-secondary bg-secondary/10 px-2.5 py-1 rounded-full border border-secondary/20">
-                      15+ Yrs Exp
-                    </span>
-                    <h3 className="text-2xl font-bold text-on-surface mt-2">Mam</h3>
-                    <p className="text-sm font-semibold text-secondary">Director of Academics & Aptitude Lead</p>
-                    <p className="text-xs text-on-surface-variant mt-3 leading-relaxed">
-                      Specializing in Quant Aptitude speed techniques, Logical Reasoning, and overall academic excellence.
-                    </p>
-                  </div>
-                  <div className="mt-4 pt-3 border-t border-outline-variant/20">
-                    <Link to="/faculty" className="text-xs font-bold text-secondary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                      View Profile & Strategy <Icon name="arrow_forward" className="text-xs" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 bg-primary overflow-hidden relative transition-colors duration-300">
+        <section className="py-16 bg-surface-container-low border-y border-outline-variant/30 overflow-hidden relative transition-colors duration-300">
           <div className="max-w-container-max mx-auto px-gutter relative z-10 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-primary mb-12 tracking-tight">Our Hall of Fame</h2>
-            <div className="flex flex-wrap justify-center gap-8">
+            <span className="text-xs uppercase tracking-widest font-extrabold text-primary px-3 py-1 bg-primary/10 rounded-full inline-block mb-3">
+              Proven Track Record
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface mb-12 tracking-tight">Our Hall of Fame</h2>
+            <div className="flex flex-wrap justify-center gap-8 sm:gap-12">
               {TOPPERS.map((t) => (
-                <div key={t.name} className="flex flex-col items-center">
-                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-secondary/30 p-1 bg-surface-container-lowest mb-3 shadow-md">
+                <div key={t.name} className="flex flex-col items-center group">
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-primary/30 p-1 bg-surface-container-lowest mb-3 shadow-md group-hover:border-primary group-hover:scale-105 transition-all">
                     <img className="w-full h-full object-cover rounded-full" alt={t.name} src={t.img} />
                   </div>
-                  <span className="text-on-primary font-bold">{t.rank}</span>
-                  <span className="text-on-primary/80 text-sm">{t.name}</span>
+                  <span className="text-primary font-extrabold text-base">{t.rank}</span>
+                  <span className="text-on-surface-variant text-sm font-medium mt-0.5">{t.name}</span>
                 </div>
               ))}
             </div>
@@ -357,22 +295,7 @@ function Index() {
           </div>
         </section>
 
-        <section className="max-w-container-max mx-auto px-gutter mb-16">
-          <div className="bg-surface-container-highest rounded-xl p-8 md:p-16 text-center relative overflow-hidden transition-colors duration-300 border border-outline-variant/30">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
-            <div className="relative z-10 flex flex-col items-center gap-4">
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-primary tracking-tight">Ready to serve the nation?</h2>
-              <p className="text-base sm:text-lg text-on-surface-variant max-w-xl">
-                Join the ranks of successful government officers. Enroll now to secure your seat for upcoming exam preparation batches.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full sm:w-auto">
-                <Link to="/courses" className="bg-primary text-on-primary px-8 py-3.5 rounded-lg font-bold shadow-lg hover:bg-primary/90 transition-all text-center">Enroll Now</Link>
-                <Link to="/contact" className="bg-surface-container-lowest text-primary border border-primary px-8 py-3.5 rounded-lg font-bold hover:bg-primary/10 transition-all text-center">Contact Admission Cell</Link>
-              </div>
-            </div>
-          </div>
-        </section>
+
       </main>
 
       <SiteFooter />
