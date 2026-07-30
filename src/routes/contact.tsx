@@ -7,7 +7,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact | Aspirant Study Center — Government Exam Admissions" },
-      { name: "description", content: "Get in touch with Aspirant Study Center. Inquire about UPSC, SSC, Banking, Railways, State PSC & Defence exam coaching, or visit our campus." },
+      { name: "description", content: "Get in touch with Aspirant Study Center. Inquire about SSC, Banking, Railways, State PSC & Defence exam coaching, or visit our campus." },
       { property: "og:title", content: "Contact | Aspirant Study Center" },
       { property: "og:description", content: "Reach our government exam admission counselors and faculty." },
       { property: "og:type", content: "website" },
@@ -92,7 +92,7 @@ function ContactPage() {
                   <label className="flex flex-col gap-1.5 text-sm font-medium">
                     Target Government Exam
                     <select className="bg-surface-container-low text-on-surface border border-outline-variant/50 rounded-lg px-4 py-2.5 focus:outline-none focus:border-primary">
-                      <option>UPSC Civil Services (IAS / IPS)</option>
+                      <option>Administrative & Public Services</option>
                       <option>SSC CGL / CHSL</option>
                       <option>Banking (IBPS / SBI PO & Clerk)</option>
                       <option>Railways (RRB NTPC & Group D)</option>

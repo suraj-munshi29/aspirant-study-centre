@@ -5,10 +5,10 @@ import { SiteFooter } from "../components/SiteFooter";
 export const Route = createFileRoute("/courses")({
   head: () => ({
     meta: [
-      { title: "Courses | Aspirant Study Center — UPSC, SSC, Banking & Railways" },
-      { name: "description", content: "Explore specialized Government Exam coaching programs for UPSC, SSC CGL/CHSL, IBPS/SBI Banking, Railways, State PSC, and Defence exams." },
+      { title: "Courses | Aspirant Study Center — SSC, Banking, Railways & State PSC" },
+      { name: "description", content: "Explore specialized Government Exam coaching programs for SSC CGL/CHSL, IBPS/SBI Banking, Railways, State PSC, and Defence exams." },
       { property: "og:title", content: "Government Exam Courses | Aspirant Study Center" },
-      { property: "og:description", content: "UPSC, SSC, Banking, Railways & State PSC coaching programs tailored for selection success." },
+      { property: "og:description", content: "SSC, Banking, Railways & State PSC coaching programs tailored for selection success." },
       { property: "og:type", content: "website" },
     ],
   }),
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/courses")({
 });
 
 const COURSES = [
-  { icon: "gavel", title: "UPSC Civil Services (IAS/IPS)", tag: "1 & 2-Year Foundation", desc: "Comprehensive GS Prelims + Mains syllabus coverage, CSAT, optional guidance, and rigorous answer-writing modules.", features: ["Daily Mains Answer Evaluation", "Monthly Current Affairs Mag", "Ex-IAS Mentorship"], color: "bg-primary/10 text-primary" },
+  { icon: "gavel", title: "Administrative & Public Services", tag: "1 & 2-Year Foundation", desc: "Comprehensive GS Prelims + Mains syllabus coverage, CSAT, optional guidance, and rigorous answer-writing modules.", features: ["Daily Mains Answer Evaluation", "Monthly Current Affairs Mag", "Expert Officer Mentorship"], color: "bg-primary/10 text-primary" },
   { icon: "account_balance", title: "SSC CGL / CHSL", tag: "Target Batch", desc: "Complete Tier-1 & Tier-2 prep focusing on high-speed Quantitative tricks, Reasoning, English, and General Awareness.", features: ["50+ Full-Length Mock Tests", "Speed Maths Workshops", "Previous 10-Year Pyq Analysis"], color: "bg-secondary/10 text-secondary" },
   { icon: "payments", title: "Banking (IBPS / SBI PO & Clerk)", tag: "Speed & Accuracy", desc: "Intensive training for SBI PO, IBPS PO/Clerk, RRB, and LIC exams with daily sectional speed tests.", features: ["Sectional Speed Drills", "Banking Awareness & Economy", "Interview Guidance Panel"], color: "bg-tertiary-container/50 text-tertiary" },
   { icon: "train", title: "Railways (RRB NTPC & Group D)", tag: "Comprehensive", desc: "Targeted coverage of General Science, General Intelligence, Arithmetic, and Railway specific GK.", features: ["Science Numerical Mastery", "CBT-1 & CBT-2 Test Series", "Bilingual Study Material"], color: "bg-primary/10 text-primary" },

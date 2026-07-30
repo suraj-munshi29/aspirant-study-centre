@@ -6,7 +6,7 @@ export const Route = createFileRoute("/faculty")({
   head: () => ({
     meta: [
       { title: "Faculty | Aspirant Study Center — Ex-Officers & Veteran Mentors" },
-      { name: "description", content: "Meet the ex-civil servants, senior GS faculty, and aptitude experts who guide aspirants to top ranks in UPSC, SSC, Banking, and State PSCs." },
+      { name: "description", content: "Meet the ex-officers, senior GS faculty, and aptitude experts who guide aspirants to top ranks in SSC, Banking, Railways, and State PSCs." },
       { property: "og:title", content: "Faculty | Aspirant Study Center" },
       { property: "og:description", content: "Meet the mentors behind our top government selection ranks." },
       { property: "og:type", content: "website" },
@@ -16,7 +16,7 @@ export const Route = createFileRoute("/faculty")({
 });
 
 const FACULTY = [
-  { name: "Dr. Anil Kapoor", role: "HOD — General Studies (UPSC)", tag: "Ex-Civil Services Mentor", exp: "20+ yrs", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" },
+  { name: "Dr. Anil Kapoor", role: "HOD — General Studies", tag: "Senior Public Services Mentor", exp: "20+ yrs", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" },
   { name: "Prof. Meera Iyer", role: "Polity & Indian Economy", tag: "Ex-RBI Officer", exp: "18 yrs", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop" },
   { name: "Rajat Sinha", role: "Quant Aptitude Lead (SSC/Banking)", tag: "M.Sc Mathematics", exp: "12 yrs", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop" },
   { name: "Dr. Sneha Rao", role: "History & Geography Specialist", tag: "Ph.D. History", exp: "15 yrs", img: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop" },

@@ -21,14 +21,14 @@ function Icon({ name, className = "" }: { name: string; className?: string }) {
 
 const VALUES = [
   { icon: "flag", title: "Our Mission", desc: "Empower every government job aspirant with the mentorship, answer-writing skills, and strategy needed to excel in competitive exams." },
-  { icon: "visibility", title: "Our Vision", desc: "Be India's most trusted institution for UPSC, SSC, Banking, Railways, and State PSC preparation, built on integrity and outstanding selection ratios." },
+  { icon: "visibility", title: "Our Vision", desc: "Be India's most trusted institution for SSC, Banking, Railways, and State PSC preparation, built on integrity and outstanding selection ratios." },
   { icon: "handshake", title: "Our Values", desc: "Consistency, analytical rigor, and dedicated mentorship guide every classroom session, test evaluation, and study module." },
 ];
 
 const TIMELINE = [
   { year: "2009", title: "Founded in Kota", desc: "Started with a vision to make top-tier government exam coaching accessible to every passionate aspirant." },
-  { year: "2014", title: "Top 50 Ranks in Civil Services", desc: "Our students achieved top ranks in UPSC CSE & SSC CGL, putting Aspirant Study Center on the national map." },
-  { year: "2019", title: "50,000+ Selections", desc: "Expanded across UPSC, Banking, SSC, and State PSC wings with specialized test evaluation labs." },
+  { year: "2014", title: "Top 50 Ranks in Competitive Exams", desc: "Our students achieved top ranks in State PSC & SSC CGL, putting Aspirant Study Center on the national map." },
+  { year: "2019", title: "50,000+ Selections", desc: "Expanded across Banking, SSC, Railways, and State PSC wings with specialized test evaluation labs." },
   { year: "2024", title: "15 Years of Trust", desc: "9 centers, 200+ ex-officers & subject experts, and a 98% qualification rate across major competitive exams." },
 ];
 

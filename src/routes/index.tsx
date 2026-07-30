@@ -11,13 +11,13 @@ const HERO_IMG =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuBYS44jWm-F-4bGcbh-qewTa-K4iH3__qSTbU1cy4PdLaSOffKTUOqPRIzj7EwlyaKj1SVW3R3Jl1N2MQjLzTfQOlTb_DR74GpbNkJPyyG8b3mkd417bB6lVEVM76vo4ImM1iGjEh3UoHL8INFqKXV1wmTttLqjrzcqOMsJKVtnLDjE8NJHLc2HarK91lDCy_Tx1l3iBLafH5KtBBXma_szMf_HooAm6zTXVOHsvdgIRJq8lGFYoDr3BKThc2AxkIxKQsfaiXp93wVd";
 
 const TOPPERS = [
-  { name: "Rahul Varma", rank: "AIR 14 - UPSC CSE", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDRscKVqy1x4Z9_AB0hARBxb7itb4BJz9_9IqWyva00SRMAELTpHrqVMjVtTj1xCK-g6rlvGbYMuCd5PTq4CpptEVGQC66PxqkAUVyTTdETWghESiLRmLoVmvchBuAiTYkcZ5i_Z1wklWx99J91CzesVD9mTz8BtTJOXeePc-Kropo5ZCTVxnqnjjVqWUoh6ErP02hR1PRMSOGCEYHrTXKDFxw4O7TE0Suvi1XfKCK7PP_ggLscnGbwDGqlDxJ7VawOmuX6iaIhsdg1" },
+  { name: "Rahul Varma", rank: "AIR 05 - State PSC", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDRscKVqy1x4Z9_AB0hARBxb7itb4BJz9_9IqWyva00SRMAELTpHrqVMjVtTj1xCK-g6rlvGbYMuCd5PTq4CpptEVGQC66PxqkAUVyTTdETWghESiLRmLoVmvchBuAiTYkcZ5i_Z1wklWx99J91CzesVD9mTz8BtTJOXeePc-Kropo5ZCTVxnqnjjVqWUoh6ErP02hR1PRMSOGCEYHrTXKDFxw4O7TE0Suvi1XfKCK7PP_ggLscnGbwDGqlDxJ7VawOmuX6iaIhsdg1" },
   { name: "Ananya Gupta", rank: "AIR 09 - SSC CGL", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBo-kbUzGGpyXvdPMBIhGCFSzdHsiSrCtnmYimG0U4Q4WRvVH5zbfAvI8EFktdviKyEnAZgONGo0gzgWWHYhLot5K3wlG-smGR4vdoA2Od2ztdmKQ-LkD4QSOgxkhxte-HYNLEE2_lx2rIL7NNRg7imdwgu4UJO5EdRpBqrjLn1vzipnZ2DCdfyHEdvWNHpY-HSu4roJJiwcyYzjriwVCSeYLcbFVegheQTG4jAtTtBaaA90f_DomHTy9q8ipsOgUXeexhQXQ-3f6E6" },
   { name: "Ishaan Singh", rank: "AIR 23 - IBPS PO", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBvToKY8Q7aBzzIRVcF4l9PMIONANIjA0fiRczm0fJMZ7KzBEmosMHh_9UK_1IFVVcYtAbZaDLF1OxRkWk71o31quD8xo-zecgTdV-5YpaGIMWT8pj9QxCnNqlzMOetGEaaeUyEAz4Pa-AMrUFxr-q-ZRLggrRc-kU3raHCxdSzIVATadap9BK2gk1FPR8S29EE2frL1fT5ZwuqM4Bsy_5Ch-hvyuWBLtfHC4ceRVlly0QEPZ3_EeS1vHNglr6Q79mvzVHWx" },
 ];
 
 const TESTIMONIALS = [
-  { quote: "The GS strategy sessions and current affairs modules at Aspirant Study Center turned my UPSC preparation around. The faculty's insights on answer writing were invaluable.", name: "Karan Mehta", role: "IAS Officer, CSE Batch '23", dot: "bg-primary/20" },
+  { quote: "The GS strategy sessions and current affairs modules at Aspirant Study Center turned my exam preparation around. The faculty's insights on answer writing were invaluable.", name: "Karan Mehta", role: "State Administrative Officer, Batch '23", dot: "bg-primary/20" },
   { quote: "Cracking SSC CGL in my very first attempt was possible only because of the speed techniques and daily mock test series at Aspirant Study Center.", name: "Priya Sharma", role: "Excise Inspector (SSC CGL)", dot: "bg-secondary/20" },
   { quote: "The Quantitative Aptitude and Reasoning faculty helped me clear SBI PO with ease. The study material is precise, comprehensive, and exam-focused.", name: "Arjun Rawat", role: "SBI PO Officer", dot: "bg-tertiary-fixed/60" },
 ];
@@ -71,6 +71,34 @@ function Typewriter({ phrases, speed = 70, delay = 2200 }: { phrases: string[]; 
   );
 }
 
+function NumberScramble({ target = 12, suffix = "+", duration = 1600, intervalSpeed = 50 }: { target?: number; suffix?: string; duration?: number; intervalSpeed?: number }) {
+  const [displayVal, setDisplayVal] = useState<number | string>(0);
+  const [isFinished, setIsFinished] = useState(false);
+
+  useEffect(() => {
+    const startTime = Date.now();
+    const interval = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      if (elapsed >= duration) {
+        setDisplayVal(target);
+        setIsFinished(true);
+        clearInterval(interval);
+      } else {
+        const randomNum = Math.floor(Math.random() * 89) + 10;
+        setDisplayVal(randomNum);
+      }
+    }, intervalSpeed);
+
+    return () => clearInterval(interval);
+  }, [target, duration, intervalSpeed]);
+
+  return (
+    <span className={`inline-block font-extrabold tracking-tight transition-all duration-300 ${!isFinished ? "text-secondary scale-105" : "text-primary scale-100"}`}>
+      {displayVal}{suffix}
+    </span>
+  );
+}
+
 function Index() {
   return (
     <div className="bg-surface text-on-surface">
@@ -86,15 +114,15 @@ function Index() {
                   <Typewriter
                     phrases={[
                       "Expert Government Exam Coaching",
-                      "UPSC & State PSC Mentorship",
-                      "SSC CGL & Banking Prep",
+                      "State PSC Mentorship",
+                      "SSC CGL & Banking Preparation",
                       "Defence & Railways Guidance",
                     ]}
                   />
                 </span>
               </h1>
               <p className="text-base sm:text-lg text-on-surface-variant max-w-xl leading-relaxed">
-                Specialized preparation for UPSC, SSC, Banking, Railways, State PSC, and Defence exams with India's top officers & subject experts. We turn ambition into government service achievement through targeted guidance.
+                Specialized preparation for SSC, Banking, Railways, State PSC, and Defence exams with India's top officers & subject experts. We turn ambition into government service achievement through targeted guidance.
               </p>
               <div className="flex flex-wrap gap-4 mt-2">
                 <Link to="/courses" className="bg-primary text-on-primary px-8 py-3.5 rounded-lg font-semibold text-sm shadow-lg hover:shadow-primary/20 active:scale-95 transition-all flex items-center gap-2">
@@ -110,57 +138,114 @@ function Index() {
             </div>
           </div>
 
-          <div className="max-w-container-max mx-auto px-gutter mt-12 md:mt-16 pb-4">
-            <div className="bg-surface-container-lowest glass-card rounded-xl shadow-md p-6 flex flex-wrap justify-between items-center gap-6 border border-outline-variant/20">
-              {[
-                { v: "15+", l: "Years Experience", c: "text-primary" },
-                { v: "50k+", l: "Officers & Selection Ranks", c: "text-primary" },
-                { v: "98%", l: "Success Rate", c: "text-secondary" },
-                { v: "200+", l: "Ex-Officers & Experts", c: "text-primary" },
-              ].map((s, i, arr) => (
-                <Fragment key={s.l}>
-                  <div className="flex flex-col items-center flex-1 min-w-[140px]">
-                    <span className={`text-2xl sm:text-3xl font-bold ${s.c}`}>{s.v}</span>
-                    <span className="text-xs font-semibold text-on-surface-variant tracking-wide mt-1 text-center">{s.l}</span>
-                  </div>
-                  {i < arr.length - 1 && <div className="w-px h-12 bg-outline-variant/30 hidden md:block" />}
-                </Fragment>
-              ))}
-            </div>
-          </div>
         </section>
 
         <section className="py-16 bg-surface-container-low transition-colors duration-300">
           <div className="max-w-container-max mx-auto px-gutter">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface tracking-tight">The Aspirant Advantage</h2>
-              <p className="text-on-surface-variant mt-2">Why thousands of government service aspirants trust Aspirant Study Center for UPSC, SSC, Banking & PSC exams.</p>
+              <p className="text-on-surface-variant mt-2">Why thousands of government service aspirants trust Aspirant Study Center for SSC, Banking & State PSC exams.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { icon: "school", title: "Ex-Bureaucrats & Subject Experts", desc: "Mentorship from former officers and veteran educators with proven track records in civil services.", bg: "bg-primary/10", color: "text-primary" },
-                { icon: "groups", title: "Focused Batches", desc: "Personalized guidance with dedicated answer-writing feedback and small batch sizes.", bg: "bg-secondary/10", color: "text-secondary" },
-                { icon: "star_rate", title: "Result-Driven Approach", desc: "Consistently producing top AIR ranks in UPSC CSE, SSC CGL, IBPS PO, and State PSCs.", bg: "bg-tertiary/10", color: "text-tertiary" },
-              ].map((f) => (
-                <div key={f.title} className="p-6 bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/30 flex flex-col gap-4 hover:bg-primary hover:text-on-primary group transition-all">
-                  <div className={`w-12 h-12 ${f.bg} rounded-lg flex items-center justify-center group-hover:bg-white/20`}>
-                    <Icon name={f.icon} className={`${f.color} group-hover:text-white`} />
+
+            {/* Bento Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+              {/* Bento Item 1: 12+ Years Experience (Merged from Top Section) */}
+              <div className="md:col-span-6 lg:col-span-5 p-8 bg-surface-container-lowest glass-card rounded-2xl border border-outline-variant/30 shadow-md flex flex-col justify-between relative overflow-hidden group hover:shadow-2xl hover:border-primary/50 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer">
+                <div className="absolute top-0 right-0 -mt-8 -mr-8 w-36 h-36 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all duration-500" />
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300 mb-6">
+                    <Icon name="workspace_premium" className="text-2xl" />
                   </div>
-                  <h4 className="text-xl font-semibold">{f.title}</h4>
-                  <p className="text-on-surface-variant group-hover:text-on-primary/80">{f.desc}</p>
+                  <span className="text-xs uppercase tracking-wider font-extrabold text-primary px-3 py-1 bg-primary/10 rounded-full inline-block mb-3">
+                    Proven Legacy
+                  </span>
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="text-4xl sm:text-5xl font-extrabold tracking-tight">
+                      <NumberScramble target={12} suffix="+" />
+                    </span>
+                    <span className="text-xl sm:text-2xl font-bold text-on-surface">Years Experience</span>
+                  </div>
+                  <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base mt-3">
+                    Over a decade of educational excellence, guiding thousands of dedicated aspirants through competitive government examinations.
+                  </p>
                 </div>
-              ))}
-              <div className="p-6 bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/30 flex flex-col gap-4 md:col-span-3 hover:bg-secondary hover:text-on-secondary group transition-all">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                  <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center group-hover:bg-white/20 flex-shrink-0">
-                    <Icon name="support_agent" className="text-secondary" style={{ fontSize: 32 }} />
+                <div className="mt-8 pt-4 border-t border-outline-variant/20 flex items-center text-xs font-semibold text-primary group-hover:translate-x-1 transition-transform duration-300">
+                  <span>Trusted by generations of toppers</span>
+                  <Icon name="arrow_forward" className="ml-1.5 text-sm" />
+                </div>
+              </div>
+
+              {/* Bento Item 2: Focused Batches */}
+              <div className="md:col-span-6 lg:col-span-7 p-8 bg-surface-container-lowest glass-card rounded-2xl border border-outline-variant/30 shadow-md flex flex-col justify-between relative overflow-hidden group hover:shadow-2xl hover:border-secondary/50 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer">
+                <div className="absolute top-0 right-0 -mt-8 -mr-8 w-36 h-36 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-all duration-500" />
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300 mb-6">
+                    <Icon name="groups" className="text-2xl" />
                   </div>
-                  <div>
-                    <h4 className="text-xl font-semibold">24/7 Current Affairs & Doubt Resolution</h4>
-                    <p className="text-on-surface-variant group-hover:text-on-secondary/80 mt-2">
-                      Stay updated with daily editorial analyses, monthly compilations, and round-the-clock doubt resolution for Prelims & Mains.
-                    </p>
+                  <span className="text-xs uppercase tracking-wider font-extrabold text-secondary px-3 py-1 bg-secondary/10 rounded-full inline-block mb-3">
+                    Personalized Mentorship
+                  </span>
+                  <h3 className="text-2xl font-bold text-on-surface mb-3">Focused Batches</h3>
+                  <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">
+                    Personalized guidance with dedicated answer-writing feedback and small batch sizes to ensure every student gets individual attention and mentorship.
+                  </p>
+                </div>
+                <div className="mt-8 pt-4 border-t border-outline-variant/20 flex flex-wrap items-center gap-3 text-xs font-medium text-on-surface-variant">
+                  <span className="flex items-center gap-1.5 bg-surface-container px-3 py-1.5 rounded-lg border border-outline-variant/20">
+                    <Icon name="check_circle" className="text-secondary text-sm" /> Small Class Sizes
+                  </span>
+                  <span className="flex items-center gap-1.5 bg-surface-container px-3 py-1.5 rounded-lg border border-outline-variant/20">
+                    <Icon name="check_circle" className="text-secondary text-sm" /> Answer Writing Practice
+                  </span>
+                </div>
+              </div>
+
+              {/* Bento Item 3: Result-Driven Approach */}
+              <div className="md:col-span-6 lg:col-span-5 p-8 bg-surface-container-lowest glass-card rounded-2xl border border-outline-variant/30 shadow-md flex flex-col justify-between relative overflow-hidden group hover:shadow-2xl hover:border-tertiary/50 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer">
+                <div className="absolute top-0 right-0 -mt-8 -mr-8 w-36 h-36 bg-tertiary/10 rounded-full blur-2xl group-hover:bg-tertiary/20 transition-all duration-500" />
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors duration-300 mb-6">
+                    <Icon name="star_rate" className="text-2xl" />
                   </div>
+                  <span className="text-xs uppercase tracking-wider font-extrabold text-tertiary px-3 py-1 bg-tertiary/10 rounded-full inline-block mb-3">
+                    Proven Outcomes
+                  </span>
+                  <h3 className="text-2xl font-bold text-on-surface mb-3">Result-Driven Approach</h3>
+                  <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">
+                    Consistently producing top All India Ranks (AIR) in SSC CGL, IBPS PO, and State PSCs with exam-oriented methodologies.
+                  </p>
+                </div>
+                <div className="mt-8 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs font-semibold text-tertiary">
+                  <span>Consistent Top AIR Ranks</span>
+                  <Icon name="trending_up" className="text-base" />
+                </div>
+              </div>
+
+              {/* Bento Item 4: 24/7 Current Affairs & Doubt Resolution */}
+              <div className="md:col-span-6 lg:col-span-7 p-8 bg-surface-container-lowest glass-card rounded-2xl border border-outline-variant/30 shadow-md flex flex-col justify-between relative overflow-hidden group hover:shadow-2xl hover:border-primary/50 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer">
+                <div className="absolute top-0 right-0 -mt-8 -mr-8 w-36 h-36 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all duration-500" />
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+                      <Icon name="support_agent" className="text-2xl" />
+                    </div>
+                    <span className="text-xs font-extrabold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                      24/7 Active Support
+                    </span>
+                  </div>
+                  <span className="text-xs uppercase tracking-wider font-extrabold text-primary px-3 py-1 bg-primary/10 rounded-full inline-block mb-3">
+                    Continuous Guidance
+                  </span>
+                  <h3 className="text-2xl font-bold text-on-surface mb-3">24/7 Current Affairs & Doubt Resolution</h3>
+                  <p className="text-on-surface-variant leading-relaxed text-sm sm:text-base">
+                    Stay updated with daily editorial analyses, monthly compilations, and round-the-clock doubt resolution for Prelims & Mains preparation.
+                  </p>
+                </div>
+                <div className="mt-8 pt-4 border-t border-outline-variant/20 flex flex-wrap items-center gap-2 text-xs font-medium text-on-surface-variant">
+                  <span className="bg-surface-container px-3 py-1.5 rounded-lg border border-outline-variant/20">Daily Editorials</span>
+                  <span className="bg-surface-container px-3 py-1.5 rounded-lg border border-outline-variant/20">Monthly Compilations</span>
+                  <span className="bg-surface-container px-3 py-1.5 rounded-lg border border-outline-variant/20">Instant Doubt Clearing</span>
                 </div>
               </div>
             </div>
