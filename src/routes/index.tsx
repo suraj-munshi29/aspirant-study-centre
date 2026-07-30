@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -36,6 +36,41 @@ function Stars() {
   );
 }
 
+function Typewriter({ phrases, speed = 70, delay = 2200 }: { phrases: string[]; speed?: number; delay?: number }) {
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentPhrase = phrases[phraseIndex];
+    let timer: ReturnType<typeof setTimeout>;
+
+    if (!isDeleting && text === currentPhrase) {
+      timer = setTimeout(() => setIsDeleting(true), delay);
+    } else if (isDeleting && text === "") {
+      setIsDeleting(false);
+      setPhraseIndex((prev) => (prev + 1) % phrases.length);
+    } else {
+      const nextText = isDeleting
+        ? currentPhrase.substring(0, text.length - 1)
+        : currentPhrase.substring(0, text.length + 1);
+
+      timer = setTimeout(() => {
+        setText(nextText);
+      }, isDeleting ? speed / 2 : speed);
+    }
+
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, phraseIndex, phrases, speed, delay]);
+
+  return (
+    <span className="inline">
+      {text}
+      <span className="inline-block w-[4px] h-[0.85em] bg-primary align-baseline ml-1 animate-pulse" />
+    </span>
+  );
+}
+
 function Index() {
   return (
     <div className="bg-surface text-on-surface">
@@ -45,12 +80,18 @@ function Index() {
         <section className="relative overflow-hidden hero-gradient pt-8 md:pt-16 pb-12">
           <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col gap-6 z-10 min-w-0">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-secondary-container/20 rounded-full w-fit border border-secondary-container/30">
-                <Icon name="verified" className="text-secondary" style={{ fontSize: 18 }} />
-                <span className="text-xs font-semibold text-secondary tracking-widest uppercase">Government Exam Prep 2024-25</span>
-              </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-on-surface leading-tight tracking-tight">
-                Master Your Future with <span className="text-primary italic">Expert Government Exam Coaching</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-on-surface leading-tight tracking-tight min-h-[3.2em]">
+                Master Your Future with{" "}
+                <span className="text-primary italic">
+                  <Typewriter
+                    phrases={[
+                      "Expert Government Exam Coaching",
+                      "UPSC & State PSC Mentorship",
+                      "SSC CGL & Banking Prep",
+                      "Defence & Railways Guidance",
+                    ]}
+                  />
+                </span>
               </h1>
               <p className="text-base sm:text-lg text-on-surface-variant max-w-xl leading-relaxed">
                 Specialized preparation for UPSC, SSC, Banking, Railways, State PSC, and Defence exams with India's top officers & subject experts. We turn ambition into government service achievement through targeted guidance.
