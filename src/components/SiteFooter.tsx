@@ -45,8 +45,8 @@ export function SiteFooter() {
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-primary">Newsletter</h4>
           <p className="text-xs text-on-surface-variant">Get current affairs updates & exam strategy directly in your inbox.</p>
-          <div className="flex gap-0 rounded-lg overflow-hidden border border-outline-variant mt-2">
-            <input className="bg-white border-none text-sm w-full focus:ring-0 px-4 min-w-0" placeholder="Your Email" type="email" />
+          <div className="flex gap-0 rounded-lg overflow-hidden border border-outline-variant/40 mt-2">
+            <input className="bg-surface-container-low text-on-surface border-none text-sm w-full focus:ring-0 px-4 min-w-0" placeholder="Your Email" type="email" />
             <button className="bg-primary text-on-primary px-4 shrink-0"><Icon name="send" /></button>
           </div>
         </div>

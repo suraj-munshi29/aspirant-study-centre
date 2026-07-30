@@ -47,7 +47,7 @@ function ContactPage() {
                 { icon: "mail", title: "Email", desc: "admissions@aspirantstudycenter.edu" },
                 { icon: "schedule", title: "Office Hours", desc: "Monday – Saturday, 9:00 AM – 8:00 PM" },
               ].map((c) => (
-                <div key={c.title} className="bg-white rounded-xl p-6 border border-outline-variant/30 shadow-sm flex gap-4">
+                <div key={c.title} className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-sm flex gap-4">
                   <div className="w-12 h-12 shrink-0 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
                     <Icon name={c.icon} />
                   </div>
@@ -64,7 +64,7 @@ function ContactPage() {
                 e.preventDefault();
                 setSubmitted(true);
               }}
-              className="lg:col-span-3 bg-white rounded-xl p-6 md:p-10 border border-outline-variant/30 shadow-sm flex flex-col gap-5"
+              className="lg:col-span-3 bg-surface-container-lowest rounded-xl p-6 md:p-10 border border-outline-variant/30 shadow-sm flex flex-col gap-5"
             >
               <h2 className="text-2xl font-bold">Admission & Course Enquiry</h2>
               <p className="text-sm text-on-surface-variant">Fill in your details and our senior counselor will contact you within 24 hours.</p>
@@ -78,20 +78,20 @@ function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <label className="flex flex-col gap-1.5 text-sm font-medium">
                       Full Name
-                      <input required className="border border-outline-variant rounded-lg px-4 py-2.5 focus:outline-none focus:border-primary" placeholder="Enter your full name" />
+                      <input required className="bg-surface-container-low text-on-surface border border-outline-variant/50 rounded-lg px-4 py-2.5 focus:outline-none focus:border-primary" placeholder="Enter your full name" />
                     </label>
                     <label className="flex flex-col gap-1.5 text-sm font-medium">
                       Phone Number
-                      <input required type="tel" className="border border-outline-variant rounded-lg px-4 py-2.5 focus:outline-none focus:border-primary" placeholder="10-digit phone number" />
+                      <input required type="tel" className="bg-surface-container-low text-on-surface border border-outline-variant/50 rounded-lg px-4 py-2.5 focus:outline-none focus:border-primary" placeholder="10-digit phone number" />
                     </label>
                   </div>
                   <label className="flex flex-col gap-1.5 text-sm font-medium">
                     Email Address
-                    <input required type="email" className="border border-outline-variant rounded-lg px-4 py-2.5 focus:outline-none focus:border-primary" placeholder="name@example.com" />
+                    <input required type="email" className="bg-surface-container-low text-on-surface border border-outline-variant/50 rounded-lg px-4 py-2.5 focus:outline-none focus:border-primary" placeholder="name@example.com" />
                   </label>
                   <label className="flex flex-col gap-1.5 text-sm font-medium">
                     Target Government Exam
-                    <select className="border border-outline-variant rounded-lg px-4 py-2.5 focus:outline-none focus:border-primary">
+                    <select className="bg-surface-container-low text-on-surface border border-outline-variant/50 rounded-lg px-4 py-2.5 focus:outline-none focus:border-primary">
                       <option>UPSC Civil Services (IAS / IPS)</option>
                       <option>SSC CGL / CHSL</option>
                       <option>Banking (IBPS / SBI PO & Clerk)</option>
@@ -102,7 +102,7 @@ function ContactPage() {
                   </label>
                   <label className="flex flex-col gap-1.5 text-sm font-medium">
                     Message / Queries
-                    <textarea rows={4} className="border border-outline-variant rounded-lg px-4 py-2.5 focus:outline-none focus:border-primary" placeholder="Tell us about your target exam year or specific questions..." />
+                    <textarea rows={4} className="bg-surface-container-low text-on-surface border border-outline-variant/50 rounded-lg px-4 py-2.5 focus:outline-none focus:border-primary" placeholder="Tell us about your target exam year or specific questions..." />
                   </label>
                   <button type="submit" className="bg-primary text-on-primary px-8 py-3.5 rounded-lg font-semibold hover:shadow-lg transition-all text-center">
                     Submit Enquiry

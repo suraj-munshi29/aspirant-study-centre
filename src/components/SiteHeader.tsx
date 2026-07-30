@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
+import { ThemeToggle } from "./ThemeToggle";
 
 const LOGO = "https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg";
 
@@ -15,8 +16,8 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
-      <nav className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 h-20 px-gutter max-w-container-max mx-auto lg:flex lg:justify-between">
+    <header className="sticky top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-colors duration-300">
+      <nav className="flex items-center justify-between h-20 px-gutter max-w-container-max mx-auto">
         <Link to="/" className="flex min-w-0 items-center gap-sm">
           <img alt="Aspirant Study Center Logo" className="h-10 w-10 shrink-0 object-contain" src={LOGO} />
           <span className="truncate text-lg sm:text-2xl font-bold text-primary tracking-tight">
@@ -24,41 +25,47 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <ul className="hidden lg:flex items-center gap-8">
-          {NAV.map((l) => (
-            <li key={l.label}>
-              <Link
-                to={l.to}
-                className="text-sm text-on-surface-variant hover:text-primary transition-colors"
-                activeProps={{ className: "text-sm text-primary border-b-2 border-primary pb-1 font-semibold" }}
-                activeOptions={{ exact: true }}
-              >
-                {l.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden lg:flex items-center gap-8">
+          <ul className="flex items-center gap-8">
+            {NAV.map((l) => (
+              <li key={l.label}>
+                <Link
+                  to={l.to}
+                  className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
+                  activeProps={{ className: "text-sm text-primary border-b-2 border-primary pb-1 font-semibold" }}
+                  activeOptions={{ exact: true }}
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ThemeToggle />
+        </div>
 
-        <button
-          type="button"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-primary hover:bg-primary/10"
-        >
-          <span className="material-symbols-outlined">{open ? "close" : "menu"}</span>
-        </button>
+        <div className="flex items-center gap-3 lg:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-primary hover:bg-primary/10 transition-colors"
+          >
+            <span className="material-symbols-outlined">{open ? "close" : "menu"}</span>
+          </button>
+        </div>
       </nav>
 
       {open && (
-        <div className="lg:hidden border-t border-outline-variant/30 bg-surface">
-          <ul className="flex flex-col px-gutter py-4 max-w-container-max mx-auto">
+        <div className="lg:hidden border-t border-outline-variant/30 bg-surface px-gutter py-4 transition-colors duration-300">
+          <ul className="flex flex-col max-w-container-max mx-auto gap-2">
             {NAV.map((l) => (
               <li key={l.label}>
                 <Link
                   to={l.to}
                   onClick={() => setOpen(false)}
-                  className="block py-2 text-base text-on-surface-variant hover:text-primary"
+                  className="block py-2 text-base text-on-surface-variant hover:text-primary transition-colors"
                   activeProps={{ className: "block py-2 text-base text-primary font-semibold" }}
                   activeOptions={{ exact: true }}
                 >

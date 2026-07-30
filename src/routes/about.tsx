@@ -54,7 +54,7 @@ function AboutPage() {
                 { v: "98%", l: "Qualification Rate" },
                 { v: "9", l: "Dedicated Centers" },
               ].map((s) => (
-                <div key={s.l} className="bg-white rounded-xl p-6 text-center shadow-sm border border-outline-variant/30">
+                <div key={s.l} className="bg-surface-container-lowest rounded-xl p-6 text-center shadow-sm border border-outline-variant/30">
                   <div className="text-2xl sm:text-3xl font-bold text-primary">{s.v}</div>
                   <div className="text-xs font-semibold text-on-surface-variant tracking-wide mt-1">{s.l}</div>
                 </div>
@@ -63,10 +63,10 @@ function AboutPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-surface-container-low">
+        <section className="py-16 bg-surface-container-low transition-colors duration-300">
           <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-6">
             {VALUES.map((v) => (
-              <div key={v.title} className="bg-white rounded-xl p-6 border border-outline-variant/30 shadow-sm">
+              <div key={v.title} className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-sm">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
                   <Icon name={v.icon} />
                 </div>
@@ -82,7 +82,7 @@ function AboutPage() {
             <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">Our Journey</h2>
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {TIMELINE.map((t) => (
-                <div key={t.year} className="bg-white rounded-xl p-6 border border-outline-variant/30 shadow-sm">
+                <div key={t.year} className="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/30 shadow-sm">
                   <div className="text-primary font-bold text-2xl">{t.year}</div>
                   <h4 className="mt-2 font-semibold">{t.title}</h4>
                   <p className="mt-1 text-sm text-on-surface-variant">{t.desc}</p>
@@ -93,10 +93,10 @@ function AboutPage() {
         </section>
 
         <section className="max-w-container-max mx-auto px-gutter mb-16">
-          <div className="bg-primary text-on-primary rounded-xl p-8 md:p-16 text-center">
+          <div className="bg-primary text-on-primary rounded-xl p-8 md:p-16 text-center shadow-lg">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold">Come see what makes us different.</h2>
             <p className="mt-4 opacity-90 max-w-xl mx-auto">Explore our specialized course structure and meet our expert faculty to start your preparation.</p>
-            <Link to="/courses" className="inline-block mt-6 bg-white text-primary px-8 py-3.5 rounded-lg font-bold hover:shadow-lg transition-all">
+            <Link to="/courses" className="inline-block mt-6 bg-surface-container-lowest text-primary px-8 py-3.5 rounded-lg font-bold hover:shadow-lg transition-all">
               Explore Courses
             </Link>
           </div>

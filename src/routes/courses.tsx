@@ -47,7 +47,7 @@ function CoursesPage() {
         <section className="py-16">
           <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {COURSES.map((c) => (
-              <article key={c.title} className="p-6 bg-white rounded-xl shadow-sm border border-outline-variant/30 flex flex-col gap-4 hover:shadow-lg transition-all">
+              <article key={c.title} className="p-6 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/30 flex flex-col gap-4 hover:shadow-lg transition-all">
                 <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${c.color}`}>
                   <Icon name={c.icon} />
                 </div>

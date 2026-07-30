@@ -130,7 +130,7 @@ function Index() {
           </div>
         </section>
 
-        <section className="py-16 bg-surface-container-low">
+        <section className="py-16 bg-surface-container-low transition-colors duration-300">
           <div className="max-w-container-max mx-auto px-gutter">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-surface tracking-tight">The Aspirant Advantage</h2>
@@ -140,9 +140,9 @@ function Index() {
               {[
                 { icon: "school", title: "Ex-Bureaucrats & Subject Experts", desc: "Mentorship from former officers and veteran educators with proven track records in civil services.", bg: "bg-primary/10", color: "text-primary" },
                 { icon: "groups", title: "Focused Batches", desc: "Personalized guidance with dedicated answer-writing feedback and small batch sizes.", bg: "bg-secondary/10", color: "text-secondary" },
-                { icon: "star_rate", title: "Result-Driven Approach", desc: "Consistently producing top AIR ranks in UPSC CSE, SSC CGL, IBPS PO, and State PSCs.", bg: "bg-tertiary-container/30", color: "text-tertiary" },
+                { icon: "star_rate", title: "Result-Driven Approach", desc: "Consistently producing top AIR ranks in UPSC CSE, SSC CGL, IBPS PO, and State PSCs.", bg: "bg-tertiary/10", color: "text-tertiary" },
               ].map((f) => (
-                <div key={f.title} className="p-6 bg-white rounded-lg shadow-sm border border-outline-variant/30 flex flex-col gap-4 hover:bg-primary hover:text-on-primary group transition-all">
+                <div key={f.title} className="p-6 bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/30 flex flex-col gap-4 hover:bg-primary hover:text-on-primary group transition-all">
                   <div className={`w-12 h-12 ${f.bg} rounded-lg flex items-center justify-center group-hover:bg-white/20`}>
                     <Icon name={f.icon} className={`${f.color} group-hover:text-white`} />
                   </div>
@@ -150,7 +150,7 @@ function Index() {
                   <p className="text-on-surface-variant group-hover:text-on-primary/80">{f.desc}</p>
                 </div>
               ))}
-              <div className="p-6 bg-white rounded-lg shadow-sm border border-outline-variant/30 flex flex-col gap-4 md:col-span-3 hover:bg-secondary hover:text-on-secondary group transition-all">
+              <div className="p-6 bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/30 flex flex-col gap-4 md:col-span-3 hover:bg-secondary hover:text-on-secondary group transition-all">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                   <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center group-hover:bg-white/20 flex-shrink-0">
                     <Icon name="support_agent" className="text-secondary" style={{ fontSize: 32 }} />
@@ -167,29 +167,29 @@ function Index() {
           </div>
         </section>
 
-        <section className="py-12 bg-primary overflow-hidden relative">
+        <section className="py-12 bg-primary overflow-hidden relative transition-colors duration-300">
           <div className="max-w-container-max mx-auto px-gutter relative z-10 text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-on-primary mb-12 tracking-tight">Our Hall of Fame</h2>
             <div className="flex flex-wrap justify-center gap-8">
               {TOPPERS.map((t) => (
                 <div key={t.name} className="flex flex-col items-center">
-                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-secondary-container p-1 bg-white mb-3">
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-secondary/30 p-1 bg-surface-container-lowest mb-3 shadow-md">
                     <img className="w-full h-full object-cover rounded-full" alt={t.name} src={t.img} />
                   </div>
                   <span className="text-on-primary font-bold">{t.rank}</span>
-                  <span className="text-primary-fixed-dim text-sm">{t.name}</span>
+                  <span className="text-on-primary/80 text-sm">{t.name}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 overflow-hidden bg-surface">
+        <section className="py-16 overflow-hidden bg-surface transition-colors duration-300">
           <div className="max-w-container-max mx-auto px-gutter">
             <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold mb-12 tracking-tight">Voices of Excellence</h2>
             <div className="animate-marquee gap-6">
               {[...TESTIMONIALS, ...TESTIMONIALS].map((t, i) => (
-                <div key={i} className="min-w-[280px] sm:min-w-[350px] p-6 bg-white rounded-lg border border-outline-variant/30 shadow-sm mr-6">
+                <div key={i} className="min-w-[280px] sm:min-w-[350px] p-6 bg-surface-container-lowest rounded-lg border border-outline-variant/30 shadow-sm mr-6">
                   <Stars />
                   <p className="text-base italic text-on-surface-variant">"{t.quote}"</p>
                   <div className="mt-6 flex items-center gap-4">
@@ -206,17 +206,17 @@ function Index() {
         </section>
 
         <section className="max-w-container-max mx-auto px-gutter mb-16">
-          <div className="bg-surface-container-highest rounded-xl p-8 md:p-16 text-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
+          <div className="bg-surface-container-highest rounded-xl p-8 md:p-16 text-center relative overflow-hidden transition-colors duration-300 border border-outline-variant/30">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
             <div className="relative z-10 flex flex-col items-center gap-4">
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-primary tracking-tight">Ready to serve the nation?</h2>
               <p className="text-base sm:text-lg text-on-surface-variant max-w-xl">
                 Join the ranks of successful government officers. Enroll now to secure your seat for upcoming exam preparation batches.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full sm:w-auto">
-                <Link to="/courses" className="bg-primary text-on-primary px-8 py-3.5 rounded-lg font-bold shadow-lg hover:bg-primary-container transition-all text-center">Enroll Now</Link>
-                <Link to="/contact" className="bg-white text-primary border border-primary px-8 py-3.5 rounded-lg font-bold hover:bg-primary/5 transition-all text-center">Contact Admission Cell</Link>
+                <Link to="/courses" className="bg-primary text-on-primary px-8 py-3.5 rounded-lg font-bold shadow-lg hover:bg-primary/90 transition-all text-center">Enroll Now</Link>
+                <Link to="/contact" className="bg-surface-container-lowest text-primary border border-primary px-8 py-3.5 rounded-lg font-bold hover:bg-primary/10 transition-all text-center">Contact Admission Cell</Link>
               </div>
             </div>
           </div>

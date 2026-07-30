@@ -49,7 +49,7 @@ function FacultyPage() {
         <section className="py-16">
           <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {FACULTY.map((f) => (
-              <article key={f.name} className="bg-white rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden hover:shadow-lg transition-all">
+              <article key={f.name} className="bg-surface-container-lowest rounded-xl border border-outline-variant/30 shadow-sm overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-square overflow-hidden bg-surface-container-low">
                   <img src={f.img} alt={f.name} className="w-full h-full object-cover" loading="lazy" />
                 </div>
