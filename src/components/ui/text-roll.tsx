@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import {
   motion,
   VariantLabels,
@@ -38,6 +39,9 @@ export function TextRoll({
   variants,
   onAnimationComplete,
 }: TextRollProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [animKey, setAnimKey] = useState(0);
+
   const defaultVariants = {
     enter: {
       initial: { rotateX: 0 },
@@ -51,12 +55,26 @@ export function TextRoll({
 
   const letters = children.split('');
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setAnimKey((k) => k + 1); // Force re-mount to replay animation
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
-    <span className={className}>
+    <span
+      className={className}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{ cursor: 'pointer' }}
+    >
       {letters.map((letter, i) => {
         return (
           <span
-            key={i}
+            key={`${i}-${animKey}`}
             className='relative inline-block [perspective:10000px] [transform-style:preserve-3d] [width:auto]'
             aria-hidden='true'
           >
