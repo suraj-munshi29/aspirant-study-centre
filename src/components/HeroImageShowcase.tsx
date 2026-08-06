@@ -188,26 +188,7 @@ function MobileShowcase() {
         ))}
       </div>
 
-      {/* Thumbnail strip */}
-      <div className="flex gap-2 mt-3 px-1 overflow-x-auto scrollbar-none">
-        {BATCH_IMAGES.map((img, i) => (
-          <button
-            key={img.src}
-            onClick={() => setActiveIndex(i)}
-            className={`flex-shrink-0 rounded-lg overflow-hidden transition-all duration-300 border-2 ${i === activeIndex
-                ? "border-cyan-400 shadow-[0_0_12px_rgba(56,189,248,0.3)] opacity-100"
-                : "border-transparent opacity-50 hover:opacity-75"
-              }`}
-          >
-            <img
-              src={img.src}
-              alt={img.alt}
-              loading="lazy"
-              className="w-14 h-9 object-cover rounded-md"
-            />
-          </button>
-        ))}
-      </div>
+
     </div>
   );
 }
