@@ -5,46 +5,13 @@ import { SiteFooter } from "../components/SiteFooter";
 import { AiLoader } from "../components/ui/ai-loader";
 import { TextRoll } from "../components/ui/text-roll";
 
-import InteractiveBentoGallery from "../components/ui/interactive-bento-gallery";
+import HeroImageShowcase from "../components/HeroImageShowcase";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const HERO_BATCH_MEDIA = [
-  {
-    id: 1,
-    type: "image",
-    title: "Classroom Batch Session",
-    desc: "Interactive lecture with expert faculty",
-    url: "/Batch (1).jpeg",
-    span: "md:col-span-2 md:row-span-2 col-span-1 sm:col-span-2 sm:row-span-2",
-  },
-  {
-    id: 2,
-    type: "image",
-    title: "Special Doubt Clearing",
-    desc: "1-on-1 mentorship & problem solving",
-    url: "/Batch (3).jpeg",
-    span: "md:col-span-2 md:row-span-2 col-span-1 sm:col-span-2 sm:row-span-2",
-  },
-  {
-    id: 3,
-    type: "image",
-    title: "Group Study & Discussion",
-    desc: "Collaborative learning & mock practice",
-    url: "/Batch (5).jpeg",
-    span: "md:col-span-2 md:row-span-2 col-span-1 sm:col-span-2 sm:row-span-2",
-  },
-  {
-    id: 4,
-    type: "image",
-    title: "Aspirant Study Centre Batch",
-    desc: "Targeted preparation for SSC & Banking",
-    url: "/Batch (6).jpeg",
-    span: "md:col-span-2 md:row-span-2 col-span-1 sm:col-span-2 sm:row-span-2",
-  },
-];
+
 
 const HERO_IMG =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuBYS44jWm-F-4bGcbh-qewTa-K4iH3__qSTbU1cy4PdLaSOffKTUOqPRIzj7EwlyaKj1SVW3R3Jl1N2MQjLzTfQOlTb_DR74GpbNkJPyyG8b3mkd417bB6lVEVM76vo4ImM1iGjEh3UoHL8INFqKXV1wmTttLqjrzcqOMsJKVtnLDjE8NJHLc2HarK91lDCy_Tx1l3iBLafH5KtBBXma_szMf_HooAm6zTXVOHsvdgIRJq8lGFYoDr3BKThc2AxkIxKQsfaiXp93wVd";
@@ -183,7 +150,7 @@ function Index() {
               </div>
             </div>
             <div className="flex justify-center items-center w-full min-w-0">
-              <InteractiveBentoGallery mediaItems={HERO_BATCH_MEDIA} />
+              <HeroImageShowcase />
             </div>
           </div>
 
